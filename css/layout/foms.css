@@ -1,0 +1,230 @@
+
+    .form-container {
+      align-items: center;
+      border-radius: 1rem;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      padding: 1rem;
+      padding-top: 2rem;
+    }
+
+    .form {
+      align-items: center;
+      background: #D9D9D9;
+      border-radius: 1rem;
+      display: flex;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    
+    .form-comments {
+      align-content: center;
+      align-items: center;
+      display: grid;
+    }
+    
+    
+    .input-comments {
+      border: none;
+      gap: 2rem;
+      padding: .5rem;
+      width: 100%;
+    }
+    
+    .submit-btn {
+      background: url(./imgs/send.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+      border-radius: .50rem;
+      cursor: pointer;
+      padding: 1.2rem;
+    }
+
+    .img-signin-container {
+      height: 100vh;
+      margin-left: 41rem;
+      padding-top: 14rem;
+      transform: scale(1.5);
+      width: 100%;
+    }
+    
+    .yellow-container {
+      background: var(--clr-yellow);
+      display: grid;
+      margin: 0;
+      padding: 0;
+    }
+    
+    
+    .data-container {
+      background: var(--clr-white);
+      display: grid;
+      height: 57vh;
+      margin-left: 33rem;
+      margin-top: -47rem;
+      position: relative;
+      width: 22%;
+      z-index: 2;
+    }
+    
+    
+    .input-comments-signin,
+    .input-comments-signin-2,
+    .input-comments-signin-3 {
+      height: 4vh;
+      margin-left: 2rem;
+      margin-top: 4rem;
+      width: 86%;
+    }
+
+    .signin-button {
+      background: var(--clr-red);
+      border: none;
+      border-radius: 1rem;
+      color: var(--clr-white);
+      cursor: pointer;
+      font-size: 16px;
+      height: 4vh;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1rem;
+      width: 55%;
+    }
+    
+    
+    .cart-item {
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      margin-bottom: 10px;
+      margin-left: 2rem;
+      padding: 10px 0;
+    }
+    
+    .cart-item img {
+      height: auto;
+      margin-right: 10px;
+      max-width: 100px;
+    }
+    
+    .cart-item-info {
+      flex: 1;
+    }
+    
+    .cart-summary {
+      margin-top: 20px;
+      text-align: right;
+    }
+    
+    .total-price {
+      /* Estilos para el precio total */
+      margin-right: 3rem;
+    }
+    
+    .checkout-button {
+      background-color: #333;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      margin-right: 2rem;
+      padding: 10px 20px;
+      margin-bottom: 2rem;
+    }
+    
+    .cart-title {
+      margin-left: 2rem;
+    }
+    
+    .login-container {
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      padding: 20px;
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+    
+    
+    .second-title-login {
+      color: #333;
+      margin-top: 0;
+    }
+    
+    .body-container-login {
+      align-items: center;
+      background-color: #F5E6CC;
+      display: flex;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .input-login {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin: 5px 0;
+      padding: 10px;
+    }
+    
+    .label-class-login {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    
+    .button-login {
+      background-color: #E74C3C;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 15px;
+      padding: 10px;
+    }
+    
+    
+    .button-login:hover {
+      background-color: #C0392B;/
+    }
+    
+    .body-container-login::before {
+      background: var(--clr-grey-login);
+      content: "";
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+    }
+
+    @media(max-width:767.98px) {
+
+      .form-comments {
+        margin: 0 1rem 2rem;
+        order: 2;
+        text-align: center;
+      }
+    
+      .form-image-image {
+        margin-bottom: 0;
+      }
+    
+      .form-title {
+        margin: auto;
+      }
+
+     }
+  

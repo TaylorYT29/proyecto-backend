@@ -1,0 +1,102 @@
+/* 
+   abstracts
+   vendors
+   base
+   layout
+   components
+   pages 
+
+ */
+
+/* en el main solo va las imports */
+@import url(abstracts/vars.css);
+@import url(./layout/foms.css);
+@import url(./layout/footer.css);
+@import url(./layout/grid.css);
+@import url(./layout/header.css);
+@import url(./layout/navigation.css);
+@import url(./layout/typography.css);
+
+/* dividir las secciones con un espacio */
+
+
+/* MEDIA QUERIES */
+
+
+/* lasndscape phone- less than 768px */
+
+
+
+
+/* flechas */
+
+
+
+/* description */
+
+
+.body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+
+
+@media (max-width: 767.98px) {
+  .data-container {
+    margin-left: 3rem;
+    margin-top: -27rem;
+    max-width: 77vh;
+    width: 35vh;
+  }
+  
+  .img-signin-container {
+    margin-left: 0;
+    padding-top: 6rem;
+  }  
+
+  .img-signin-container img {
+    width: 100%;
+  }
+
+
+  .input-comments-signin,
+  .input-comments-signin-2,
+  .input-comments-signin-3 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .signin-button {
+    margin-top: 1rem;
+  }
+
+  .form-comments {
+    margin: 0 1rem 2rem;
+    order: 2;
+    text-align: center;
+  }
+   
+
+  .form-image-image {
+    margin-bottom: 0;
+  }
+
+  .form-title {
+    margin: auto;
+  }
+
+}

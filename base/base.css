@@ -1,0 +1,10 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    display: grid;
+    font-family: var(--ff-tertiary);
+    margin: 0;
+    padding: 0;
+}

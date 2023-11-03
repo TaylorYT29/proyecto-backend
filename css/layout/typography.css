@@ -1,0 +1,72 @@
+.hero-title {
+    display: flex;
+    font-family: var(--ff-tertiary);
+    justify-content: center;
+    margin-top: -4.5rem;
+}
+
+.nav-list-link {
+    font-family: var(--ff-secondary);
+}
+
+.second-title {
+    font-family: var(--ff-tertiary);
+}
+
+.recipe-title {
+    color: var(--clr-white);
+    font-family: var(--ff-tertiary);
+}
+
+.recipe-price {
+    color: var(--clr-white);
+    font-family: var(--ff-tertiary);
+}
+
+.categories-title {
+    color: var(--clr-white);
+}
+
+.quantities-title {
+    color: var(--clr-white);
+}
+
+.delivery-title {
+    color: var(--clr-white);
+}
+
+.description-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    text-align: left;
+    width: 80vw;
+  }
+  
+  .description-recipe {
+    background-color: #a5a5a5;
+    padding-left: 2rem;
+    padding-top: 2rem;
+  }
+  
+  /* description */
+  
+  .description-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    text-align: center;
+    width: 80vw;
+  }
+  
+  .description-recipe {
+    background-color: #a5a5a5;
+  }
+
+  .about-text {
+    margin-top: 20px;
+  }
+  
+  

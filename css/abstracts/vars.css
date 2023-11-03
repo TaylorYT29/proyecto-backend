@@ -1,0 +1,24 @@
+:root {
+/* FONTS */
+/* font-family */
+--ff-main: 'Inter', sans-serif;
+--ff-secondary: 'Poppins', sans-serif; 
+--ff-tertiary: 'Roboto', sans-serif;
+/* fonts-size */
+--fs-md: 1.5rem;
+--fs-sm: 1rem;
+
+/* colors */
+--clr-inner-bg: hsla(210, 8%, 5%, 1);
+--clr-black: hsla(210, 8%, 5%, 1);
+--clr-white:hsla(0,100%,100%,1);
+--clr-grey: hsla(0, 0%, 20%, 1);
+--clr-grey-footer: rgb(122, 123, 124);
+--clr-grey-arrows: rgb(165, 165, 165);
+--clr-grey-login: hsla(0, 0%, 85%, 1);
+--clr-yellow: hsla(40, 100%, 51%, 1);
+--clr-red: hsla(4, 96%, 32%, 1);
+--clr-yellow-2: hsl(38, 67%, 88%);
+--clr-yellow-3: hsl(34, 100%, 94%);
+
+}

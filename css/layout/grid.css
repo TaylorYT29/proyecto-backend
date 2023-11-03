@@ -1,0 +1,255 @@
+.recipe-container-shopping {
+    display: grid;
+    gap: 3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    margin-left: 4rem;
+    width: 45vw;
+  }
+
+  .buy {
+    border-radius: 1rem;
+    margin-left: 63rem;
+    margin-right: auto;
+    margin-top: -72rem;
+    width: 54vh;
+  }
+
+  .second-title {
+    color: #000000;
+    margin: 4rem 0;
+    text-align: center;
+  }
+
+  .recipe-container {
+    display: grid;
+    gap: 3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    width: 80vw;
+  }
+  
+  
+  .recipe-image {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 215px;
+    justify-content: center;
+    width: 235px;
+  }
+  
+  
+  .recipes {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  
+  .recipe {
+    background-color: #A20E03;
+    border-radius: 25px;
+    display: grid;
+    margin: auto;
+    text-align: center;
+  }
+
+  .btn-add {
+    background: #FFAA04;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: #000;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding: 1rem 1rem;
+    text-decoration: none;
+  }
+
+  .categories {
+    background-color: #A20E03;
+    border-radius: 25px;
+    display: grid;
+    margin: auto;
+    text-align: center;
+  }
+
+  .categories-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    width: 80vw;
+  }
+
+  .quantities-container {
+    display: grid;
+    width: 80vw;
+    margin: 2rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  
+  .categories-image {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 215px;
+    justify-content: center;
+    width: 235px;
+  }
+
+  .quantities-image {
+    background-color: var(--clr-white);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 215px;
+    justify-content: center;
+    width: 235px;
+  }
+
+  .delivery-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    width: 80vw;
+  }
+  
+  
+  .delivery {
+    background-color: #A20E03;
+    border-radius: 35px;
+    display: grid;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .delivery-image {
+    background-color: var(--clr-white);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    height: 215px;
+    justify-content: center;
+    width: 235px;
+  }
+
+  .link-delivery {
+    margin: auto;
+    text-decoration: none;
+  }
+
+  .flecha-derecha {
+    position: absolute;
+    right: 105px;
+    top: 310px;
+  }
+  
+  .flecha-izquierda {
+    left: 105px;
+    position: absolute;
+    top: 310px;
+  }
+
+  
+  .mas {
+    display: grid;
+    margin-left: 70px;
+    padding-bottom: 1rem;
+  }
+  
+  .shop {
+    display: grid;
+    gap: 2rem;
+    margin: auto;
+  }
+
+  .link-categories {
+    margin: auto;
+    text-decoration: none;
+    
+  }
+
+  .description {
+    background-color: #333333;
+    color: var(--clr-white);
+    display: flex;
+    gap: 4rem;
+    padding-bottom: 15rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 15rem;
+  }
+  
+  .total {
+    background-color: #333333;
+    color: var(--clr-white);
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+  }
+  
+  
+  .container-shopping {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .contact-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    text-align: center;
+    width: 80vw;
+  }
+  
+  
+  .img-contact {
+    height: 50px;
+    width: 50px;
+  }
+
+  .title-categories {
+    color: #ffff;
+    text-align: center;
+  }
+
+  .contact-container {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 2rem auto;
+    text-align: center;
+    width: 80vw;
+  }
+  
+  .img-contact {
+    height: 50px;
+    width: 50px;
+  }
+
+  .container-about {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  
+  .about-section {
+    text-align: center;
+  }
+  
+  .about-section img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .quantities{
+    display: grid;
+    background-color: #A20E03;
+    border-radius:  35px 35px;
+    text-align: center;
+    margin: auto;
+  }
