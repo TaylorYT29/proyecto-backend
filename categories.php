@@ -9,32 +9,9 @@
 </head>
 
 <body>
-    <header>
-        <nav class="top-nav">
-            <a href=""><img class="logo-img" src="./imgs/identificador grafico proyecto.svg" alt=""></a>
-            <input type="checkbox" class="mobile-check" id="check">
-            <label class="mobile-btn" for="check">
-                <span></span>
-            </label>
-
-            <ul class="navigation">
-                <li><a class="nav-list-link" href="./index.html">Home</a></li>
-                <li><a class="nav-list-link" href="./categories.html">Categories</a></li>
-                <li><a class="nav-list-link" href="./delivery.html">Delivery</a></li>
-                <li><a class="nav-list-link" href="./about-us.html">About Us</a></li>
-                <li><a class="nav-list-link" href="./Contact-us.html">Contact us</a></li>
-                <li><a class="nav-list-icon" href="#"><img class="icon" src="./imgs/vector-find-icon.svg"
-                            alt="Find"></a></li>
-                <li><a class="nav-list-icon" href="./shopping.html"><img class="icon"
-                            src="./imgs/shopping-cart-icon-isolated-on-white-background-free-vector.svg"
-                            alt="Shopping"></a></li>
-                <li><a class="nav-list-icon" href="./signin.html"><img class="icon"
-                            src="./imgs/profile-icon-login-head-icon-vector.svg" alt="Profile"></a></li>
-
-            </ul>
-        </nav>
-    </header>
-
+    <?php 
+        include "./parts/header.php"
+    ?>
     <h2 class="second-title">Categories</h2>
 
     <main>
@@ -111,33 +88,9 @@
 
     </main>
 
-    <footer class="footer-container">
-        <div class="footer-links">
-            <section>
-                <ul class="nav-bottom-list">
-                    <li><a class="nav-bottom-link" href="#">Policies</a></li>
-                    <li><a class="nav-bottom-link" href="#">Addresses</a></li>
-                    <li><a class="nav-bottom-link" href="#">Contact</a></li>
-                    <li><a class="nav-bottom-link" href="#">Mobile app</a></li>
-                </ul>
-            </section>
-        </div>
-
-        <div>
-            <img class="icon-image" src="./imgs/identificador grafico proyecto.svg" alt="">
-        </div>
-
-        <section>
-            <ul class="nav-bottom-apps">
-                <li><a><img src="./imgs/app-store.png" alt=""></a></li>
-                
-                <li><a><img src="./imgs/google-play.png" alt=""></a></li>
-                
-            </ul>
-        </section>
-
-        <p class="footer-legal">&copy; 2023. All rights reserved.</p>
-    </footer>
+    <?php 
+        include "./parts/footer.php"
+    ?>
 
 </body>
 
