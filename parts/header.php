@@ -17,7 +17,7 @@
                 <li><a class="nav-list-icon" href="./shopping.php"><img class="icon"
                             src="./imgs/shopping-cart-icon-isolated-on-white-background-free-vector.svg"
                             alt="Shopping"></a></li>
-                <li><a class="nav-list-icon" href="./signin.php"><img class="icon"
+                <li><a class="nav-list-icon" href="./add-users.php"><img class="icon"
                             src="./imgs/profile-icon-login-head-icon-vector.svg" alt="Profile"></a></li>
 
             </ul>
