@@ -53,7 +53,6 @@ if ($_POST) {
     }
 }
 ?>
-
 <link rel="stylesheet" href="./css/main.css">
 <title>User Registration</title>
 </head>
