@@ -253,3 +253,17 @@
     text-align: center;
     margin: auto;
   }
+
+  .activities-container{
+    width: 100vw;
+    margin: 2rem auto;
+    gap: 1.5rem;
+}
+
+.destinations-container{
+    text-align: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: grid;
+    width: fit-content;
+}
+
