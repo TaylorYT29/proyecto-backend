@@ -16,6 +16,7 @@
 .recipe-title {
     color: var(--clr-white);
     font-family: var(--ff-tertiary);
+    font-size: .9rem;
 }
 
 .recipe-price {

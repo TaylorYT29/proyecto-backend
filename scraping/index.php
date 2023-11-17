@@ -13,7 +13,7 @@
     $menu_item_descriptions = [];
     $image_urls = [];
 
-    $menu_items = 10;
+    $menu_items = 24;
 
     $items = file_get_html($link);
 
@@ -42,6 +42,9 @@
             $menu_item_descriptions[] = $description[0]->plaintext;
             
             $filename = strtolower(trim($title[0]->plaintext));
+            $filename = str_replace('(', '' $filename);
+            $filename = str_replace(')', '' $filename);
+            $filename = str_replace('(', '' $filename);
             $filename = str_replace(' ', '-', $filename);
             $filenames[] = $filename;
 
@@ -68,23 +71,24 @@
     }
 
     //get and download images
-    //  foreach ($filenames as $index=>$image){
-    //      file_put_contents("./images/".$image.".jpg", file_get_contents($image_urls[$index]));
-    //  }
+    //   foreach ($filenames as $index=>$image){
+    //       file_put_contents("../imgs/".$image.".jpg", file_get_contents($image_urls[$index]));
+    //   }
 
     //insert info
     // Reference: https://medoo.in/api/insert
 
 
-     for($index=0; $index<10; $index++){
-          $database->insert("dish_information",[
-             "name"=> $menu_item_names[$index],
-             "image"=> "images".$filenames[$index].".jpg",
-             "category"=> "category",
-             "isFeatured"=> "isFeatured",
-             "description"=> $menu_item_descriptions[$index],
+      for($index=0; $index<24; $index++){
+           $database->insert("tb_dish_information",[
+              "name"=> $menu_item_names[$index],
+             "image"=> $filenames[$index].".jpg",
+              "category"=> "category",
+              "isFeatured"=> "isFeatured",
+              "description"=> $menu_item_descriptions[$index],
              "people_quantity"=>"people_quantity",
-      ]);
-     }
+              "price"=> 50
+       ]);
+      }
  
 ?>

@@ -1,3 +1,10 @@
+<?php
+    require_once './database.php';
+    // Reference: https://medoo.in/api/select
+    $items = $database->select("tb_dish_information","*");
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,112 +40,26 @@
     <main>
         <h2 class="second-title">Featured</h2>
         <div class="recipe-container">
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
+            <?php
+                    foreach($items as $item){
+                        echo "<section class='recipe'>";
+                        echo "<div class='recipe-thum'>";
+                        echo "<img class='recipe-image' src='./imgs/".$item["image"]."' alt='".$item["name"]."'>";
+                        echo "</div>";
+                        echo "<h3 class='recipe-title'>".$item["name"]."</h3>";
+                        echo "<p class='recipe-price'>$".$item["price"]."</p>";
+                        echo "<a class='btn-add' href='description.php?id=".$item["id_dish_information"]."'>View Details</a>";
+                    echo "</section>";
+                    }
+                ?>
 
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-                    <!-- <button class="like-btn"><img src="" alt="Like"></button> -->
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="./description.html">ADD</a>
-            </section>
         </div>
         <!-- recipe -->
 
         <h2 class="second-title">Categories</h2>
 
         <div class="categories-container">
-            <a class="link-categories" href="./categories-entrees.html">
+            <a class="link-categories" href="./categories-entrees.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Entrees-img.jpg" alt="">
@@ -147,7 +68,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./categories-main.html">
+            <a class="link-categories" href="./categories-main.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Main Dishes-img.jpg" alt="">
@@ -156,7 +77,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./categories-desserts.html">
+            <a class="link-categories" href="./categories-desserts.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Desserts-img.jpg" alt="">
@@ -165,7 +86,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./categories-drinks.html">
+            <a class="link-categories" href="./categories-drinks.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Drinks-img.jpg" alt="">

@@ -17,7 +17,7 @@
     <main>
         <div class="categories-container">
 
-            <a class="link-categories" href="./categories-entrees.html">
+            <a class="link-categories" href="./categories-entrees.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Entrees-img.jpg" alt="">
@@ -26,7 +26,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./categories-main.html">
+            <a class="link-categories" href="./categories-main.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Main Dishes-img.jpg" alt="">
@@ -35,7 +35,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./categories-desserts.html">
+            <a class="link-categories" href="./categories-desserts.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Desserts-img.jpg" alt="">
@@ -44,7 +44,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./categories-drinks.html">
+            <a class="link-categories" href="./categories-drinks.php">
                 <section class="categories">
                     <div class="categories-thumb">
                         <img class="categories-image" src="./imgs/Drinks-img.jpg" alt="">
@@ -58,7 +58,7 @@
         <h2 class="second-title">quantities</h2>
 
         <div class="quantities-container">
-            <a class="link-categories" href="./quanties-one.html">
+            <a class="link-categories" href="./quanties-one.php">
                 <section class="quantities">
                     <div class="quantities-thumb">
                         <img class="quantities-image" src="./imgs/one-person.png" alt="">
@@ -67,7 +67,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./quantities-two.html">
+            <a class="link-categories" href="./quantities-two.php">
                 <section class="quantities">
                     <div class="quantities-thumb">
                         <img class="quantities-image" src="./imgs/2-people.png" alt="">
@@ -76,7 +76,7 @@
                 </section>
             </a>
 
-            <a class="link-categories" href="./quantities-family.html">
+            <a class="link-categories" href="./quantities-family.php">
                 <section class="quantities">
                     <div class="quantities-thumb">
                         <img class="quantities-image" src="./imgs/family.png" alt="">
