@@ -1,3 +1,10 @@
+<?php
+    require_once './database.php';
+    // Reference: https://medoo.in/api/select
+    $items = $database->select("tb_dish_information","*");
+    
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

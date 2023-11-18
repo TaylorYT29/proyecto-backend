@@ -25,9 +25,16 @@
     <h1 class="hero-title">Jägermeister's Tisch</h1>
     <div class="carousel-container">
             <div class="carousel-slide">
-                <div class="carousel-item"><img src="./imgs/salad01.jpg" alt="Image 1"></div>
+                <!-- <div class="carousel-item"><img src="./imgs/salad01.jpg" alt="Image 1"></div>
                 <div class="carousel-item"><img src="./imgs/salad02.jpg" alt="Image 2"></div>
-                <div class="carousel-item"><img src="./imgs/salad03.jpg" alt="Image 3"></div>
+                <div class="carousel-item"><img src="./imgs/salad03.jpg" alt="Image 3"></div> -->
+                <?php 
+                   foreach($items as $item){   
+                        echo "<img class='carousel-item' src='./imgs/".$item["image"]."' alt='".$item["name"]."'>"; 
+                    } 
+                ?>
+                
+
             </div>
             <button id="prevBtn" class="carousel-button prev-button">
                 <img src="./imgs/left-arrow.svg" alt="Previous">
@@ -46,7 +53,7 @@
                         echo "<div class='recipe-thum'>";
                         echo "<img class='recipe-image' src='./imgs/".$item["image"]."' alt='".$item["name"]."'>";
                         echo "</div>";
-                        echo "<h3 class='recipe-title'>".$item["name"]."</h3>";
+                        echo "<h3 class='recipe-title'>".substr($item["name"],0,30)."...</h3>";
                         echo "<p class='recipe-price'>$".$item["price"]."</p>";
                         echo "<a class='btn-add' href='description.php?id=".$item["id_dish_information"]."'>View Details</a>";
                     echo "</section>";

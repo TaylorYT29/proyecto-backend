@@ -18,8 +18,8 @@ nextButton.addEventListener("click", () => {
 function moveSlide(n) {
     slideIndex += n;
     if (slideIndex < 0) {
-        slideIndex = 2;
-    } else if (slideIndex > 2) {
+        slideIndex = 24;
+    } else if (slideIndex > 24) {
         slideIndex = 0;
     }
 
