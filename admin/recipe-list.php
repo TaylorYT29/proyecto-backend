@@ -17,7 +17,7 @@
             foreach($items as $item){
                 echo "<tr>";
                 echo "<td>".$item["name"]."</td>";
-                echo "<td><a href='edit-destination.php?id_dish_information=".$item["id_dish_information"]."'>Edit</a> <a href='delete-recipe.php?id_dish_information=".$item["id_dish_information"]."'>Delete</a></td>";
+                echo "<td><a href='edit-recipe.php?id_dish_information=".$item["id_dish_information"]."'>Edit</a> <a href='delete-recipe.php?id_dish_information=".$item["id_dish_information"]."'>Delete</a></td>";
                 echo "</tr>";
             }
         ?>

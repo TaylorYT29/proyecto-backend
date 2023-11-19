@@ -41,12 +41,12 @@
 
             // Reference: https://medoo.in/api/insert
               $database->insert("tb_dish_information",[
-                "id_dish_category"=>$_POST["dish_category"],
+                "id_dish_categories"=>$_POST["dish_category"],
                 "name"=>$_POST["name"],
                 // "name_deu"=>$_POST["name_deu"],
                 "image"=>$img,
                 "isFeatured"=> "isFeatured",
-                "description"=>$_POST["description"],
+                "dish_information_description"=>$_POST["dish_information_description"],
                 // "description_deu"=>$_POST["description_deu"],
                 "people_quantity"=>"people_quantity",
                 "price"=>$_POST["price"]
@@ -104,8 +104,8 @@
             </div>
 
             <div class="form-items">
-                <label for="description">Dish Description</label>
-                <textarea id="description" name="description" id="" cols="30" rows="10"></textarea>
+                <label for="dish_information_description">Dish Description</label>
+                <textarea id="dish_information_description" name="dish_information_description" id="" cols="30" rows="10"></textarea>
             </div>
 
             <!-- <div class="form-items">
