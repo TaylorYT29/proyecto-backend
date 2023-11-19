@@ -35,7 +35,7 @@
                 $filename = str_replace(',', '', $filename);
                 $filename = str_replace('.', '', $filename);
                 $filename = str_replace(' ', '-', $filename);
-                $img= "location-".$filename.".".$file_ext;
+                $img= "recipe-".$filename.".".$file_ext;
                 move_uploaded_file($file_tmp, "../imgs/".$img);
 
 
