@@ -1,0 +1,6 @@
+.lang-btn{
+    text-decoration: none;
+    background: var(--clr-gray);
+    color: #000000;
+    text-transform: uppercase;
+}

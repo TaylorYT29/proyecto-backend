@@ -82,6 +82,10 @@
                 
             </div>
 
+            <?php 
+                echo "<span id='lang' class='lang-btn' onclick='getTranslation(".$item[0]["id_dish_information"].")'>DEU</span>";
+            ?>
+
             <div class="recipe">
                 <?php 
                     echo "<section class='recipe'>";
@@ -102,6 +106,51 @@
     <?php 
         include "./parts/footer.php"
     ?>
+
+
+<script>
+
+        let requestLang = "deu";
+        
+        
+        function switchLang(){
+            if(requestLang == "en") requestLang ="deu";
+            else requestLang ="en";
+            document.getElementById("lang").innerText = requestLang;
+
+        }
+
+
+        function getTranslation(id){
+           
+            let info = {
+                id_dish_information: id,
+                language: requestLang
+            };
+
+            //fetch
+
+            fetch("http://localhost/proyecto-backend/language.php",{
+                method: "POST",
+                mode: "same-origin",
+                credentials:"same-origin",
+                headers:{
+                    'Accept': 'application/json,text/plain,*/*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(info)
+            })
+            .then(response => response.json())
+            .then(data=>{
+                switchLang();
+                document.getElementById("dish-name").innerText = data.name;
+                document.getElementById("dish-description").innerText = data.description;
+               
+            })
+            .catch(err => console.log("error"+err));
+           
+        }
+    </script>
     
 </body>
 </html>
