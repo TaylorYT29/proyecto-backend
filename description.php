@@ -130,7 +130,7 @@
 
             //fetch
 
-            fetch("http://localhost/proyecto-backend/language.php",{
+            fetch("http://localhost/traducir/proyecto-backend/language.php",{
                 method: "POST",
                 mode: "same-origin",
                 credentials:"same-origin",
