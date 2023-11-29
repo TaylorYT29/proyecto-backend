@@ -28,8 +28,7 @@
         ], [
             "id_dish_information" => $_GET["id_dish_information"]
         ]);
-        
-        var_dump($item);
+ 
     }
 
     if($_POST){

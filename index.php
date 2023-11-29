@@ -111,7 +111,7 @@
 
                 <form class="form" action="">
                     <input class="input-comments" type="text" placeholder="comments">
-                    <input class="submit-btn" type="submit" value="">
+                    <input class="submit-btn" type="submit" value="Send">
                 </form>
             </section>
 

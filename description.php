@@ -73,7 +73,7 @@
 
                 echo "<br>";
 
-                echo "<p class=''>".$item[0]["name_category"].": ".$item[0]["description"]."</p>";
+                echo "<p class=''>".$item[0]["name_category"]."</p>";
 
                 echo "<br>";
 
@@ -130,7 +130,7 @@
 
             //fetch
 
-            fetch("http://localhost/traducir/proyecto-backend/language.php",{
+            fetch("http://localhost/proyecto-backend/language.php",{
                 method: "POST",
                 mode: "same-origin",
                 credentials:"same-origin",

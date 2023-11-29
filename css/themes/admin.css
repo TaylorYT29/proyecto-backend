@@ -65,3 +65,31 @@ thead{
 td{
     padding: .7rem;
 }
+
+.table-columns{
+    margin: 1rem 0 0;
+    font-size: var(--fs-md);
+    background-color: var(--clr-red);
+    border: solid 1px var(--clr-black); 
+    
+}
+
+.table-row{
+   background-color: var(--clr-grey);
+   border: solid 1px var(--clr-black); 
+}
+
+table{
+    border-collapse: collapse;
+}
+
+tr,td{
+    color: var(--clr-grey-arrows);
+}
+
+
+.link-admin{
+    text-decoration: none;
+    color: var(--clr-grey-arrows);
+   
+}

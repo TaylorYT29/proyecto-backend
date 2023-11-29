@@ -18,6 +18,7 @@
 @import url(./layout/typography.css);
 @import url(./pages/signin.css);
 @import url(./components/components.css);
+@import url(./themes/admin.css);
 
 /* dividir las secciones con un espacio */
 

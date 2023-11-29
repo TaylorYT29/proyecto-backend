@@ -3,4 +3,5 @@
     background: var(--clr-gray);
     color: #000000;
     text-transform: uppercase;
+    cursor: pointer;
 }
