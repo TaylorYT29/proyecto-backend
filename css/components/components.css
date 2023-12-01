@@ -1,7 +1,41 @@
-.lang-btn{
+.btn {
+    display: flex;
+    align-items: center;
+    background: var(--clr-main);
+    padding: .5rem 2rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+}
+
+.lang-btn {
     text-decoration: none;
     background: var(--clr-gray);
     color: #000000;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.btn.search-btn {
+    background: var(--clr-red);
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: var(--clr-white);
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.btn-add {
+    background: #FFAA04;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: #000;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding: 1rem 1rem;
+    text-decoration: none;
 }
