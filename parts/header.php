@@ -12,7 +12,7 @@
                 <li><a class="nav-list-link" href="./delivery.php">Delivery</a></li>
                 <li><a class="nav-list-link" href="./about-us.php">About Us</a></li>
                 <li><a class="nav-list-link" href="./Contact-us.php">Contact us</a></li>
-                <li><a class="nav-list-icon" href="#"><img class="icon" src="./imgs/vector-find-icon.svg"
+                <li><a class="nav-list-icon" href="./search-filters.php"><img class="icon" src="./imgs/vector-find-icon.svg"
                             alt="Find"></a></li>
                 <li><a class="nav-list-icon" href="./shopping.php"><img class="icon"
                             src="./imgs/shopping-cart-icon-isolated-on-white-background-free-vector.svg"

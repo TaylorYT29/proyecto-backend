@@ -94,7 +94,15 @@
                         echo "<h3  class=''><span id='dish-name'>".$item[0]["name"]."</h3>";
                     echo "</div>";
 
-                    echo "<a class='btn-add' href='#'>BUY</a>";
+                    if(isset($_SESSION["isLoggedIn"])){
+                        $link = "dish-shopping.php?id=".$item[0]["id_dish_information"]."";
+                    }else{
+                        $link = "./forms.php";
+                    }
+                    
+                    echo "<a class='btn-add' href='".$link."'>BUY</a>";
+
+                    
                 ?>
                 
 
