@@ -15,7 +15,7 @@
     <h2 class="second-title">Dish-list</h2>
     <?php 
     echo "<table style='margin-top: 2rem;'>"
-    ."<tr class='table-columns'><td>Name</td> <td>Description</td> <td>Category</td> <td>People_quantity</td> <td>Price</td> <td>
+    ."<tr class='table-columns'><td class='table-title'>Name</td> <td class='table-title'>Description</td> <td class='table-title'>Category</td> <td class='table-title'>People_quantity</td> <td class='table-title'>Price</td> <td class='table-title'>
     action</td> </tr>";
         foreach($items as $item){
             echo "<tr>"

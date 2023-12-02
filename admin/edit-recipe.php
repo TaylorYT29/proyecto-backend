@@ -17,9 +17,11 @@
         ], [
             "tb_dish_information.id_dish_information",
             "tb_dish_information.name",
+            "tb_dish_information.name_deu",
             "tb_dish_information.image",
             "tb_dish_information.isFeatured",
             "tb_dish_information.dish_information_description",
+            "tb_dish_information.dish_information_description_deu",
             "tb_dish_information.people_quantity",
             "tb_dish_information.price",
             "tb_dish_categories.id_dish_categories",
@@ -67,9 +69,11 @@
         $database->update("tb_dish_information",[
             "tb_dish_information.id_dish_categories" => $_POST["category"],
             "name"=>$_POST["name"],
+            "name_deu"=>$_POST["name_deu"],
             "image"=>"$img",
             "isFeatured"=> "isFeatured",
             "dish_information_description"=>$_POST["dish_information_description"],
+            "dish_information_description_deu"=>$_POST["dish_information_description_deu"],
             "people_quantity"=>"people_quantity",
             "price"=>$_POST["price"]
         ],[
@@ -91,7 +95,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Edit Dish</h2>
+        <h2 class="title-admin">Edit Dish</h2>
    <?php 
             echo $message;
     ?>
@@ -103,15 +107,15 @@
                 <input id="name" class="textfield" name="name" type="text" value="<?php echo $item[0]["name"]?>">
             </div>
 
-            <!-- <div class="form-items">
-                <label for="name_deu">turkish Destination Name</label>
-                <input id="name_deu" class="textfield" name="name_deu" type="text">
-            </div> -->
+            <div class="form-items">
+                <label for="name_deu">Germany Dish Name</label>
+                <input id="name_deu" class="textfield" name="name_deu" type="text" value= "<?php echo $item[0]["name_deu"]?>" >
+            </div> 
 
 
             <div class="form-items">
                 <label for="dish_category">Dish Category</label>
-                <select name="dish_category" id="dish_category">
+                <select name="dish_category" id="dish_category" class="option-category">
                 <?php 
                         foreach($categories as $category){
                             if($item[0]["id_dish_categories"]==$category["id_dish_categories"]) {
@@ -128,18 +132,18 @@
 
             <div class="form-items">
                 <label for="dish_information_description">Description</label>
-                <textarea id="dish_information_description" name="dish_information_description" id="" cols="30" rows="10"><?php echo $item[0]["dish_information_description"];?></textarea>
+                <textarea id="dish_information_description" name="dish_information_description" class="textfield" id="" cols="30" rows="10"><?php echo $item[0]["dish_information_description"]?></textarea>
+            </div>
+
+            <div class="form-items">
+                <label for="dish_information_description_deu">Germany Description</label>
+                <textarea id="dish_information_description_deu" name="dish_information_description_deu" class="textfield" id="" cols="30" rows="10"><?php echo $item[0]["dish_information_description_deu"]?></textarea>
             </div>
             
-            <!-- <div class="form-items">
-                <label for="description_deu">Turkish Destination Description</label>
-                <textarea id="description_deu" name="description_deu" id="" cols="30" rows="10"></textarea>
-            </div> -->
-
             <div class="form-items">
                 <label for="image">Dish Image</label>
                 <img id="preview" src="../imgs/<?php echo $item[0]["image"];?>" alt="Preview">
-                <input id="image" type="file" name="image" onchange="readURL(this)">
+                <input class="textfield" id="image" type="file" name="image" onchange="readURL(this)">
             </div>
             <div class="form-items">
                 <label for="price">Dish Price</label>

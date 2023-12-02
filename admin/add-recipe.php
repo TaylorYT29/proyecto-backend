@@ -43,11 +43,11 @@
               $database->insert("tb_dish_information",[
                 "id_dish_categories"=>$_POST["dish_category"],
                 "name"=>$_POST["name"],
-                // "name_deu"=>$_POST["name_deu"],
+                "name_deu"=>$_POST["name_deu"],
                 "image"=>$img,
                 "isFeatured"=> "isFeatured",
                 "dish_information_description"=>$_POST["dish_information_description"],
-                // "description_deu"=>$_POST["description_deu"],
+                "dish_information_description_deu"=>$_POST["dish_information_description_deu"],
                 "people_quantity"=>"people_quantity",
                 "price"=>$_POST["price"]
 
@@ -72,7 +72,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Add New Dish</h2>
+        <h2 class="title-admin">Add New Dish</h2>
    <?php 
             echo $message;
     ?>
@@ -82,21 +82,21 @@
         <form method="post" action="add-recipe.php" enctype="multipart/form-data">
             <div class="form-items">
                 <label for="name">Dish Name</label>
-                <input id="name" class="textfield" name="name" type="text">
+                <input id="name" class="textfield" name="name" type="text" placeholder="Name">
             </div>
 
-            <!-- <div class="form-items">
-                <label for="name_deu">turkish Destination Name</label>
-                <input id="name_deu" class="textfield" name="name_deu" type="text">
-            </div> -->
+            <div class="form-items">
+                <label for="name_deu">Germany Dish Name</label>
+                <input id="name_deu" class="textfield" name="name_deu" type="text" placeholder="Name">
+            </div>
 
 
             <div class="form-items">
                 <label for="dish_category">Dish Category</label>
-                <select name="dish_category" id="dish_category">
+                <select name="dish_category" id="dish_category" class="option-category">
                 <?php 
                         foreach($categories as $categories){
-                            echo"<option value='".$categories["id_dish_categories"]."' >".$categories["name_category"]."</option>";
+                            echo"<option class='textfield' value='".$categories["id_dish_categories"]."' >".$categories["name_category"]."</option>";
                         }
                     ?>
 
@@ -105,22 +105,22 @@
 
             <div class="form-items">
                 <label for="dish_information_description">Dish Description</label>
-                <textarea id="dish_information_description" name="dish_information_description" id="" cols="30" rows="10"></textarea>
+                <textarea class="textfield" id="dish_information_description" name="dish_information_description" placeholder="Description" id="" cols="30" rows="10"></textarea>
             </div>
 
-            <!-- <div class="form-items">
-                <label for="description_deu">Turkish Destination Description</label>
-                <textarea id="description_deu" name="description_deu" id="" cols="30" rows="10"></textarea>
-            </div> -->
+            <div class="form-items">
+                <label for="dish_information_description_deu">Germany Dish Description</label>
+                <textarea class="textfield" id="dish_information_description_deu" name="dish_information_description_deu" placeholder="Description"  id="" cols="30" rows="10"></textarea>
+            </div>
 
             <div class="form-items">
                 <label for="image">Dish Image</label>
-                <img id="preview" src="../imgs/destination-placeholder.webp" alt="Preview">
-                <input id="image" type="file" name="image" onchange="readURL(this)">
+                <img id="preview" src="../imgs/add-image.png" alt="Preview">
+                <input class="textfield" id="image" type="file" name="image" onchange="readURL(this)">
             </div>
             <div class="form-items">
                 <label for="price">Dish Price</label>
-                <input id="price" class="textfield" name="price" type="text">
+                <input id="price" class="textfield" name="price" type="text" placeholder="Price $">
             </div>
             <div class="form-items">
                 <input class="submit-btn" type="submit" value="Add New Dish">

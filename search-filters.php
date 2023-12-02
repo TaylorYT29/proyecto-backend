@@ -71,7 +71,7 @@
             };
 
             //fetch
-            fetch("http://localhost/traducir/proyecto-backend/response.php", {
+            fetch("http://localhost/proyecto-backend/response.php", {
                 method: "POST",
                 mode: "same-origin",
                 credentials: "same-origin",

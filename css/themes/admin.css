@@ -4,7 +4,8 @@ body{
 
 .container{
     display: grid;
-    width: 15rem;
+    padding-left: 25rem;
+    padding-right: 25rem;
 }
 
 .form-items{
@@ -18,8 +19,22 @@ label{
 }
 
 input, textarea{
-    padding: .5rem;
+    padding: .8rem;
     border-radius: .5rem;
+}
+
+.option-category{
+    padding: .8rem;
+    background-color: #D9D9D9;
+    border: none;
+    margin-top: 1rem;
+    border-radius: .5rem;
+}
+
+.textfield{
+    background-color: #D9D9D9;
+    border: none;
+    margin-top: 1rem;
 }
 
 #preview{
@@ -27,19 +42,22 @@ input, textarea{
     width: 100%;
 }
 
+.title-admin{
+    text-align: center;
+}
+
 .submit-btn{
     border: none;
-    background: black;
-    color: white;
+    background: #FFAA04;
+    color: var(--clr-black);
     padding: 1rem 0;
     cursor: pointer;
 }
 
 .link-btn{
     border-radius: .5rem;
-    color: black;
+    color: var(--clr-black);
     text-decoration: none;
-    background: #009eff;
     padding: 0.5rem;
     position: absolute;
     top: 1rem;
@@ -47,32 +65,23 @@ input, textarea{
 }
 
 input[type='file'] {
-    background: #12579f;
-    color: transparent;
+    color: var(--clr-white);
     padding: 1rem 0;
+    background-color: #D9D9D9;
 }
 
 input[type='file']::before {
-    content: 'Pick an image file';
-    color: white;
+    content: 'Select an image';
+    color: var(--clr-black);
     margin: 0 .7rem;
   }
 
-thead{
-    font-weight: bold;
-}
 
 td{
     padding: .7rem;
 }
 
-.table-columns{
-    margin: 1rem 0 0;
-    font-size: var(--fs-md);
-    background-color: var(--clr-red);
-    border: solid 1px var(--clr-black); 
-    
-}
+
 
 .table-row{
    background-color: var(--clr-grey);
@@ -87,7 +96,17 @@ tr,td{
     color: var(--clr-grey-arrows);
 }
 
+.table-title{
+    color: var(--clr-white);
+}
 
+.table-columns{
+    margin: 1rem 0 0;
+    font-size: var(--fs-md);
+    background-color: var(--clr-red);
+    border: solid 1px var(--clr-black); 
+    color: var(--clr-white);
+}
 .link-admin{
     text-decoration: none;
     color: var(--clr-grey-arrows);
