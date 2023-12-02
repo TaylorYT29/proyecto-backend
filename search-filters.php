@@ -60,7 +60,9 @@
         </section>
 
     </main>
-
+    <?php 
+        include "./parts/footer.php";
+    ?>
     <script>
 
         function getFilters(){
@@ -71,7 +73,7 @@
             };
 
             //fetch
-            fetch("http://localhost/proyecto-backend/response.php", {
+            fetch("http://localhost/traducir2/proyecto-backend/restaurant/response.php", {
                 method: "POST",
                 mode: "same-origin",
                 credentials: "same-origin",
@@ -125,15 +127,12 @@
                         title.innerText = item.name;
                         dish.appendChild(title);
                         //description
-                        let description = document.createElement("p");
-                        description.classList.add("dish-text");
-                        description.innerText = item.description.substr(1,70) + "...";
-                        dish.appendChild(description);
+
                         //link
                         let link = document.createElement("a");
                         link.classList.add("btn");
                         link.classList.add("read-btn");
-                        link.setAttribute("href", "dish-information-ajax.php?id="+item.id_dish_information);
+                        link.setAttribute("href", "dish-ajax.php?id="+item.id_dish_information);
                         link.innerText = "View Details";
                         dish.appendChild(link);
                     });
@@ -141,12 +140,9 @@
                 
             })
             .catch(err => console.log("error: " + err));
-
+            
         }
     </script>
-    <?php 
-        include "./parts/footer.php";
-    ?>
-    </section>
+
 </body>
 </html>
