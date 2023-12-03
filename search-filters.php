@@ -73,7 +73,7 @@
             };
 
             //fetch
-            fetch("http://localhost/traducir2/proyecto-backend/restaurant/response.php", {
+            fetch("http://localhost/proyecto-backend/response.php", {
                 method: "POST",
                 mode: "same-origin",
                 credentials: "same-origin",
@@ -130,9 +130,9 @@
 
                         //link
                         let link = document.createElement("a");
-                        link.classList.add("btn");
-                        link.classList.add("read-btn");
-                        link.setAttribute("href", "dish-ajax.php?id="+item.id_dish_information);
+                        link.classList.add("btn-add");
+                        link.classList.add("btn-add");
+                        link.setAttribute("href", "description.php?id="+item.id_dish_information);
                         link.innerText = "View Details";
                         dish.appendChild(link);
                     });

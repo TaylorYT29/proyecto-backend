@@ -13,10 +13,6 @@
     <body class="body">
         <header class="header">
             <h1>About Us</h1>
-            <nav class="nav">
-                <a href="./index.html">Home</a>
-                <!-- Agrega enlaces a otras secciones si es necesario -->
-            </nav>
         </header>
     
         <div class="container-about">
