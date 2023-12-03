@@ -13,7 +13,7 @@
     $menu_item_descriptions = [];
     $image_urls = [];
 
-    $menu_items = 24;
+    $menu_items = 36;
 
     $items = file_get_html($link);
 
@@ -79,14 +79,14 @@
     // Reference: https://medoo.in/api/insert
 
 
-      for($index=0; $index<24; $index++){
+      for($index=0; $index<36; $index++){
            $database->insert("tb_dish_information",[
               "name"=> $menu_item_names[$index],
              "image"=> $filenames[$index].".jpg",
-              "category"=> "category",
-              "isFeatured"=> "isFeatured",
+              "category"=> rand(1,4),
+              "isFeatured"=> rand(0,1),
               "description"=> $menu_item_descriptions[$index],
-             "people_quantity"=>"people_quantity",
+             "people_quantity"=>rand(1,3),
               "price"=> 50
        ]);
       }
