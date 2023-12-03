@@ -1,7 +1,7 @@
 <?php
     require_once './database.php';
     // Reference: https://medoo.in/api/select
-    $items = $database->select("tb_dish_information","*");
+    $items = $database->select("tb_dish_information","*",["isFeatured"=>"1"]);
     
 ?>
 
@@ -47,6 +47,7 @@
     <main>
         <h2 class="second-title">Featured</h2>
         <div class="recipe-container">
+
             <?php
                     foreach($items as $item){
                         echo "<section class='recipe'>";
@@ -56,7 +57,7 @@
                         echo "<h3 class='recipe-title'>".substr($item["name"],0,30)."...</h3>";
                         echo "<p class='recipe-price'>$".$item["price"]."</p>";
                         echo "<a class='btn-add' href='description.php?id=".$item["id_dish_information"]."'>View Details</a>";
-                    echo "</section>";
+                        echo "</section>";
                     }
                 ?>
 
