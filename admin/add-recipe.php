@@ -4,6 +4,7 @@
 
      // Reference: https://medoo.in/api/select 
     $categories = $database->select("tb_dish_categories", "*");
+    $people_quantity= $database->select("tb_people_quantity","*");
 
     $message = "";
     
@@ -45,10 +46,10 @@
                 "name"=>$_POST["name"],
                 "name_deu"=>$_POST["name_deu"],
                 "image"=>$img,
-                "isFeatured"=> "isFeatured",
+                "isFeatured"=> $_POST["isFeatured"],
                 "dish_information_description"=>$_POST["dish_information_description"],
                 "dish_information_description_deu"=>$_POST["dish_information_description_deu"],
-                "people_quantity"=>"people_quantity",
+                "id_people_quantity"=>$_POST["people_quantity"],
                 "price"=>$_POST["price"]
 
              ]);
@@ -102,6 +103,26 @@
 
                 </select>
             </div>
+
+
+            <div class="form-items">
+                <label for="people_quantity">People Quantity</label>
+                <select name="people_quantity" id="people_quantity" class="option-category">
+                <?php 
+                        foreach($people_quantity as $people_quantity){
+                            echo"<option class='textfield' value='".$people_quantity["id_people_quantity"]."' >".$people_quantity["name_quantity"]."</option>";
+                        }
+                    ?>
+
+                </select>
+            </div>
+
+
+            <div class="form-items">
+                <label for="isFeatured">isFeatured</label>
+                <input id="isFeatured" class="textfield" name="isFeatured" type="number" min="0" max="1" placeholder="isFeatured">
+            </div>
+
 
             <div class="form-items">
                 <label for="dish_information_description">Dish Description</label>

@@ -8,12 +8,14 @@
     require_once '../database.php';
     // Reference: https://medoo.in/api/select
     $categories = $database->select("tb_dish_categories","*");
+    $people_quantity= $database->select("tb_people_quantity","*");
 
     $message = "";
 
     if (isset($_GET)){
         $item = $database->select("tb_dish_information", [
-            "[>]tb_dish_categories" => ["id_dish_categories" => "id_dish_categories"]
+            "[>]tb_dish_categories" => ["id_dish_categories" => "id_dish_categories"],
+            "[>]tb_people_quantity" => ["id_people_quantity" => "id_people_quantity"]
         ], [
             "tb_dish_information.id_dish_information",
             "tb_dish_information.name",
@@ -22,7 +24,9 @@
             "tb_dish_information.isFeatured",
             "tb_dish_information.dish_information_description",
             "tb_dish_information.dish_information_description_deu",
-            "tb_dish_information.people_quantity",
+            "tb_people_quantity.id_people_quantity",
+            "tb_people_quantity.name_quantity",
+            "tb_people_quantity.description",
             "tb_dish_information.price",
             "tb_dish_categories.id_dish_categories",
             "tb_dish_categories.name_category",
@@ -71,10 +75,10 @@
             "name"=>$_POST["name"],
             "name_deu"=>$_POST["name_deu"],
             "image"=>"$img",
-            "isFeatured"=> "isFeatured",
+            "isFeatured"=>$_POST["isFeatured"],
             "dish_information_description"=>$_POST["dish_information_description"],
             "dish_information_description_deu"=>$_POST["dish_information_description_deu"],
-            "people_quantity"=>"people_quantity",
+            "tb_dish_information.id_people_quantity"=>$_POST["quantity"],
             "price"=>$_POST["price"]
         ],[
             "id_dish_information"=>$_POST["id"]
@@ -129,6 +133,29 @@
 
                 </select>
             </div>
+
+            <div class="form-items">
+                <label for="people_quantity">People Quantity</label>
+                <select name="people_quantity" id="people_quantity" class="option-category">
+                <?php 
+                        foreach($people_quantity as $quantity){
+                            if($item[0]["id_people_quantity"]==$quantity["id_people_quantity"]) {
+                                echo"<option value='".$quantity["id_people_quantity"]."' selected>".$quantity["name_quantity"]."</option>";
+                            } else {
+                                echo "<option value='".$quantity["id_people_quantity"]."'>".$quantity["name_quantity"]."</option>";
+                            }
+                        }
+                    ?>
+
+                </select>
+            </div>
+
+            <div class="form-items">
+                <label for="isFeatured">isFeatured</label>
+                <input id="isFeatured" class="textfield" name="isFeatured" type="number" min="0" max="1" value="<?php echo $item[0]["isFeatured"]?>">
+            </div>
+
+
 
             <div class="form-items">
                 <label for="dish_information_description">Description</label>
