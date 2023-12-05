@@ -113,3 +113,23 @@ tr,td{
     color: var(--clr-grey-arrows);
    
 }
+
+.img-admin{
+    width: 15rem;
+    height: 15rem;
+}
+
+.container-admin{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    
+}
+
+.link-back{
+    text-decoration: none;
+    color: var(--clr-black);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

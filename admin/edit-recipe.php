@@ -1,10 +1,5 @@
 <?php 
-    /*
-     * 0. include database connection file
-     * 1. receive form values from post and insert them into the table (match table field with values from name atributte)
-     * 2. for the destination_image insert the value "destination-placeholder.webp"
-     * 3. redirect to destinations-list. php after complete the insert into
-     */
+   
     require_once '../database.php';
     // Reference: https://medoo.in/api/select
     $categories = $database->select("tb_dish_categories","*");
@@ -17,6 +12,7 @@
             "[>]tb_dish_categories" => ["id_dish_categories" => "id_dish_categories"],
             "[>]tb_people_quantity" => ["id_people_quantity" => "id_people_quantity"]
         ], [
+
             "tb_dish_information.id_dish_information",
             "tb_dish_information.name",
             "tb_dish_information.name_deu",
@@ -71,14 +67,14 @@
             $img = $data[0]["image"];
         }
         $database->update("tb_dish_information",[
-            "tb_dish_information.id_dish_categories" => $_POST["category"],
+            "id_dish_categories" => $_POST["dish_category"],
             "name"=>$_POST["name"],
             "name_deu"=>$_POST["name_deu"],
             "image"=>"$img",
             "isFeatured"=>$_POST["isFeatured"],
             "dish_information_description"=>$_POST["dish_information_description"],
             "dish_information_description_deu"=>$_POST["dish_information_description_deu"],
-            "tb_dish_information.id_people_quantity"=>$_POST["quantity"],
+            "id_people_quantity"=>$_POST["people_quantity"],
             "price"=>$_POST["price"]
         ],[
             "id_dish_information"=>$_POST["id"]

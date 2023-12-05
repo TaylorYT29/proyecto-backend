@@ -74,6 +74,8 @@
 <body>
     <div class="container">
         <h2 class="title-admin">Add New Dish</h2>
+
+        <a class="link-back" href="admin-action.php">Back</a>
    <?php 
             echo $message;
     ?>

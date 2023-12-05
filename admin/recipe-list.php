@@ -12,7 +12,11 @@
     <title>Dish-list</title>
 </head>
 <body>
+    
     <h2 class="second-title">Dish-list</h2>
+    <a class="link-back" href="admin-action.php">Back</a>
+
+
     <?php 
     echo "<table style='margin-top: 2rem;'>"
     ."<tr class='table-columns'><td class='table-title'>Name</td> <td class='table-title'>Description</td> <td class='table-title'>Category</td> <td class='table-title'>People_quantity</td> <td class='table-title'>Price</td> <td class='table-title'>
