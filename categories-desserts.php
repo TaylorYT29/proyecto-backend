@@ -1,3 +1,9 @@
+<?php
+    require_once './database.php';
+    // Reference: https://medoo.in/api/select
+    $items = $database->select("tb_dish_information","*",["id_dish_categories"=>"3"]);
+    
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,52 +23,27 @@
     </div>
 
     <div>
-        <a class="flecha-derecha" href="./categories-drinks.html"><img src="./imgs/right-arrow.png" alt=""></a>
-        <a class="flecha-izquierda" href="./categories-main.html"><img src="./imgs/left-arrow.png" alt=""></a>
+        <a class="flecha-derecha" href="./categories-drinks.php"><img src="./imgs/right-arrow.png" alt=""></a>
+        <a class="flecha-izquierda" href="./categories-main.php"><img src="./imgs/left-arrow.png" alt=""></a>
     </div>
 
     <main>
-        <div class="recipe-container">
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
+    <div class="recipe-container">
 
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="#">ADD</a>
-            </section>
+    <?php
+        foreach($items as $item){
+            echo "<section class='recipe'>";
+            echo "<div class='recipe-thum'>";
+            echo "<img class='recipe-image' src='./imgs/".$item["image"]."' alt='".$item["name"]."'>";
+            echo "</div>";
+            echo "<h3 class='recipe-title'>".substr($item["name"],0,30)."...</h3>";
+            echo "<p class='recipe-price'>$".$item["price"]."</p>";
+            echo "<a class='btn-add' href='description.php?id=".$item["id_dish_information"]."'>View Details</a>";
+            echo "</section>";
+        }
+    ?>
 
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="#">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="#">ADD</a>
-            </section>
-
-            <section class="recipe">
-                <div class="recipe-thumb">
-                    <img class="recipe-image" src="./imgs/prueba.jpg" alt="">
-
-                </div>
-                <h3 class="recipe-title">Nombre</h3>
-                <p class="recipe-price">Price</p>
-                <a class="btn-add" href="#">ADD</a>
-            </section>
-        </div>
+</div>
 
 
     </main>

@@ -38,10 +38,11 @@
                 <form>
                     <label for="search" class="dish-title">Search</label>
                     <input id="search" class="search" type="text" name="keyword">
+                    
                     <select name="people_quantity" id="people_quantity" class="filter">
                     <?php 
                         foreach($quantities as $quantity){
-                            echo "<option value='".$quantity["id_peolple_quantity"]."'>".$quantity["name"]."</option>";
+                            echo "<option value='".$quantity["id_people_quantity"]."'>".$quantity["name_quantity"]."</option>";
                         }
                     ?>
                     </select>
