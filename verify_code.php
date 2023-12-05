@@ -26,7 +26,7 @@ if ($_POST && isset($_POST["verify_code"])) {
 <title>Verification Code</title>
 </head>
 <body>
-    <section class="destinations-container">
+    <section class="dish-container">
         <div class="activities-container"></div>
         <form method="post" action="verify_code.php">
             <div class="container">

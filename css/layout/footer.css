@@ -29,12 +29,6 @@
     scale: 0.6;
 }
 
-.cta-app-container {
-    display: flex;
-    gap: .5rem;
-    margin-left: auto;
-}
-
 .nav-bottom-apps {
     align-items: flex-end;
     display: flex;
@@ -52,7 +46,7 @@
     max-width: 100%;
 }
 
-.footer-legal{
+.footer-legal {
     color: var(--clr-white);
     font-size: var(--fs-md);
     padding-bottom: 2rem;

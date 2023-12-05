@@ -1,4 +1,4 @@
-.top-nav{
+.top-nav {
     display: flex;
     align-items: center;
     margin-top: 3rem;
@@ -31,7 +31,7 @@
     height: 30px; 
 } 
 
-.logo-img{
+.logo-img {
     width: 80px;
     height: 80px; 
 }
@@ -53,12 +53,9 @@
     margin-left: 1rem; 
 }
 
-
-
-.mobile-check{
+.mobile-check {
     display: none;
 }
-
 
 @media(min-width:800px) {
     .top-nav {
@@ -69,7 +66,6 @@
         margin-right: auto;
     }
 }
-
 
 @media(max-width:767.98px) {
 
@@ -138,8 +134,6 @@
     .mobile-check:checked ~ .navigation{
         right: 0;
     }
-
-    /* mobile check */
     
     .navigation{
         display: grid;

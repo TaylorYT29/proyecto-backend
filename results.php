@@ -2,9 +2,6 @@
     require_once './database.php';
 
     if(isset($_GET)) {
-       /* $items = $database->select("tb_destinations","*",[
-            "destination_lname[~]"=>$_GET["keyword"]
-        ]);*/
         $items = $database->select("tb_dish_information","*",[
             "AND" => [
                 "id_peolple_quantity" => $_GET["people_quantity"],
@@ -36,10 +33,10 @@
             include "./parts/activities.php";
         ?>
 
-        <!-- destinations -->
-        <section class="destinations-container">
-            <img src="./imgs/icons/destinations.svg" alt="Explore Destinations & Activities">
-            <h2 class="destinations-title">Explore Destinations & Activities</h2>
+
+        <section class="dish-container">
+            <img src="./imgs/icons/dish.svg" alt="">
+            <h2 class="dish-title"></h2>
             <?php 
             if(count($items) > 0) {
                 echo "<p> class= 'activity-text'> We found: ".count($items)." dish(es)</p>";

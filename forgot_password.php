@@ -33,7 +33,7 @@ if ($_POST && isset($_POST["send_code"])) {
 <title>Password Recovery</title>
 </head>
 <body>
-    <section class="destinations-container">
+    <section class="dish-container">
         <div class="activities-container"></div>
         <form method="post" action="forgot_password.php">
             <div class="container">

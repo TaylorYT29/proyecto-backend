@@ -16,10 +16,6 @@
                 ]
             ]);
     
-            /*$state = $database->select("tb_us_states","*",[
-                "id_us_state" => $_GET["destination_state"]
-            ]);*/
-
             echo json_encode($items);
         }
     }

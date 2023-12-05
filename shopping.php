@@ -11,7 +11,7 @@
         include "./parts/header.php"
     ?>
 <body>
-    <header class="carrito-header">
+    <header class="shopping-header">
         <h1>Jägermeister's Tisch</h1>
     </header>
     <div class="container">

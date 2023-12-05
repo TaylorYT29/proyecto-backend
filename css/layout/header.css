@@ -4,18 +4,6 @@
     padding: 0;
 }
 
-.hero-container {
-    background: hsla(0, 0%, 65%, 1);
-    background-position: center;
-    background-size: cover;
-    border: 1px solid rgb(0, 162, 255);
-    border-bottom-left-radius: 6rem;
-    border-bottom-right-radius: 6rem;
-    height: min(45rem, 50rem, 55rem);
-    text-align: center;
-    width: 100%;
-}
-
 .header-img {
     background: var(--clr-grey-footer);
     background-position: center;
@@ -39,7 +27,6 @@
     position: relative;
     width: 100%;
 }
-
 
 .carousel-slide {
     display: flex;
@@ -93,7 +80,7 @@
     padding: 5rem;
 }
 
-.carrito-header {
+.shopping-header {
     background-color: #333;
     color: #fff;
     padding: 10px;

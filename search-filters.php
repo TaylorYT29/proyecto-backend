@@ -32,7 +32,7 @@
 
         <!-- dishes-->
         <section id="dishes" class="filter-title">
-            <h2 class="destinations-title">Enjoy our recipes</h2>
+            <h2 class="dish-title">Enjoy our recipes</h2>
             <div class="activities-filter-container">
           
                 <form>

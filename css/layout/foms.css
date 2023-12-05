@@ -40,34 +40,6 @@
       cursor: pointer;
       padding: 1.2rem;
     }
-
-    .img-signin-container {
-      height: 100vh;
-      margin-left: 41rem;
-      padding-top: 14rem;
-      transform: scale(1.5);
-      width: 100%;
-    }
-    
-    .yellow-container {
-      background: var(--clr-yellow);
-      display: grid;
-      margin: 0;
-      padding: 0;
-    }
-    
-    
-    .data-container {
-      background: var(--clr-white);
-      display: grid;
-      height: 57vh;
-      margin-left: 33rem;
-      margin-top: -47rem;
-      position: relative;
-      width: 22%;
-      z-index: 2;
-    }
-    
     
     .input-comments-signin,
     .input-comments-signin-2,

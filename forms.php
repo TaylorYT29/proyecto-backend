@@ -96,7 +96,7 @@ if ($_POST) {
 </head>
 
 <body>
-    <section class="destinations-container">
+    <section class="dish-container">
         <form method="post" action="forms.php">
             <div class="container">
                 <div class="card-register">
