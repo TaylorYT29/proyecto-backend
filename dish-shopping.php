@@ -1,10 +1,10 @@
 <?php
     require_once './database.php';
 
-    $amount = 1;
-    $service = "";
-    $pos_array = -1;
-    $day ="";
+    // $amount = 1;
+    // $service = "";
+    // $pos_array = -1;
+    // $day ="";
 
     if($_GET){
        
@@ -25,17 +25,17 @@
         ]);
 
 
-        $dish_details = [];
-        if(isset($_GET["index"])){
-            $data = json_decode($_COOKIE['dish'], true);
-            $booking_details = $data[$_GET["index"]];
-            var_dump($dish_details);
+        // $dish_details = [];
+        // if(isset($_GET["index"])){
+        //     $data = json_decode($_COOKIE['dish'], true);
+        //     $booking_details = $data[$_GET["index"]];
+        //     var_dump($dish_details);
 
-            $amount = $dish_details["amount"];
-            $day = $dish_details["day"];
-            $service= $dish_details["service"];
-            $pos_array = $_GET["index"];
-        }
+        //     $amount = $dish_details["amount"];
+        //     $day = $dish_details["day"];
+        //     $service= $dish_details["service"];
+        //     $pos_array = $_GET["index"];
+        // }
     }
 ?>
 
@@ -69,41 +69,18 @@
                 
             </div>
 
-        
-            <div class="">
-                <?php 
-                  echo "<form class='form-container' action='confirmation.php' method='post'>"
-                  
-                  ."<div class='form-items'>"
-                      ."<div>"
-                          ."<label class='form-label' for='day'>Day</label>"
-                      ."</div>"
-                      ."<div>"
-                          ."<input id='day' class='form-input' class='form-input' type='date' name='day' min='' max='2024-06-30' data-check='".$day."'>"
-                      ."</div>"
-                  ."</div>"
+            <form method="post" action="shopping.php">
+                <div>
+                    <div>
+                        <label for="amount">Select the quantity</label>
+                        <input class="textfield" name="amount" type="number" min="1" value="1">
+                    </div>
+                </div>
+                <input type="hidden" name="id_dish_information" value='<?php echo $item[0]["id_dish_information"]; ?>'>
 
-                  ."<div class='form-items'>"
-                      ."<div>"
-                          ."<label class='form-label' for='amount'>amount</label>"
-                      ."</div>"
-                      ."<div>"
-                          ."<input id='amount' class='form-input' type='number' name='amount' min='1' max='' value='".$amount."'>"
-                      ."</div>"
-                  ."</div>"
-
-                  ."<div class='form-items'>"
-                      ."<div>"
-                          ."<label class='form-label' for='service'>service</label>"
-                      ."</div>"
-                      ."<div>"
-                          ."<input id='service' class='form-input' type='text' name='service'value='".$service."'>"
-                      ."</div>"
-                  ."</div>"
-
-                ?>
-            
-            </div>
+                <input type="hidden" name="price" value='<?php echo $item[0]["price"]; ?>'>
+                <input type="submit" value="Order Now">
+            </form>  
         </div>
     </main>
     
