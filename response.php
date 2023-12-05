@@ -1,4 +1,11 @@
 <?php
+
+/*
+This file serves as an API endpoint to fetch dish information based on the provided JSON payload.
+It expects a JSON payload with "quantity" and "category" properties, which are used to filter dishes
+from the database table "tb_dish_information" based on "id_people_quantity" and "id_dish_categories".
+*/
+
     require_once './database.php';
     
     if(isset($_SERVER["CONTENT_TYPE"])){

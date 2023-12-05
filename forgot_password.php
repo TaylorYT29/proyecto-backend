@@ -1,4 +1,14 @@
 <?php
+
+/*
+This file handles the password recovery process. It verifies the provided email,
+generates a reset code, and sends it to the user's email address for verification.
+
+The script relies on 'database.php' file and 'email.php' file for database
+access and email functionality.
+
+*/
+
 require_once './database.php';
 $message = "";
 
@@ -7,7 +17,9 @@ if ($_POST && isset($_POST["send_code"])) {
 
     $user = $database->select("tb_users", "*", ["email" => $email]);
 
+    // If the email exists, generate a reset code and proceed with the recovery process
     if (count($user) > 0) {
+        // Generate a random reset code
         $resetCode = bin2hex(random_bytes(16));
 
         session_start();

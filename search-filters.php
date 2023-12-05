@@ -1,4 +1,15 @@
 <?php
+
+/*
+This file initializes and retrieves necessary data from the database, including dish information,
+people quantity options, and dish category options. It then displays a webpage allowing users to filter
+dishes based on search criteria such as people quantity and dish category.
+ 
+The "SEARCH DISH" button triggers a JavaScript function (getFilters) that makes a fetch request to the server. 
+The server responds with filtered dish information, and the webpage dynamically updates to display the matching 
+dishes or a "No Results" message.
+*/
+
     require_once './database.php';
     // Reference: https://medoo.in/api/select
     $items = $database->select("tb_dish_information","*");
@@ -74,7 +85,7 @@
             };
 
             //fetch
-            fetch("http://localhost/proyecto-backend/response.php", {
+            fetch("http://localhost/z/proyecto-backend/response.php", {
                 method: "POST",
                 mode: "same-origin",
                 credentials: "same-origin",

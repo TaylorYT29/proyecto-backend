@@ -8,7 +8,6 @@
 </head>
 <body class="body-container-login">
     <div class="login-container">
-        <!-- Agrega el botón de ir a la página de inicio (home) -->
         <a href="home.html" class="back-button">Volver a Inicio</a>
         <h2 class="second-title-login">Log in</h2>
         <form class="login-form" action="procesar-login.php" method="post">

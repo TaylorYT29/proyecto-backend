@@ -1,4 +1,14 @@
 <?php
+
+/*
+This file retrieves and displays dish information based on the specified parameters
+passed through the query string ($_GET). It queries the "tb_dish_information" table in the
+database to fetch dishes matching the given "people_quantity" and "dish_category" criteria.
+
+The retrieved dish information is then displayed on the webpage, showing dish images, names,
+prices, and brief descriptions. If no matching dishes are found, it displays a "No Results" message.
+*/
+
     require_once './database.php';
 
     if(isset($_GET)) {

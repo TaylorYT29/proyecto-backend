@@ -25,16 +25,11 @@
     <h1 class="hero-title">Jägermeister's Tisch</h1>
     <div class="carousel-container">
             <div class="carousel-slide">
-                <!-- <div class="carousel-item"><img src="./imgs/salad01.jpg" alt="Image 1"></div>
-                <div class="carousel-item"><img src="./imgs/salad02.jpg" alt="Image 2"></div>
-                <div class="carousel-item"><img src="./imgs/salad03.jpg" alt="Image 3"></div> -->
                 <?php 
                    foreach($items as $item){   
                         echo "<img class='carousel-item' src='./imgs/".$item["image"]."' alt='".$item["name"]."'>"; 
                     } 
                 ?>
-                
-
             </div>
             <button id="prevBtn" class="carousel-button prev-button">
                 <img src="./imgs/left-arrow.svg" alt="Previous">
@@ -62,7 +57,6 @@
                 ?>
 
         </div>
-        <!-- recipe -->
 
         <h2 class="second-title">Categories</h2>
 
@@ -104,7 +98,6 @@
             </a>
         </div>
 
-
         <div class="form-container">
             <section class="form-comments">
                 <h2 class="form-title">Tell us how your experience has been</h2>
@@ -126,8 +119,6 @@
     <?php 
         include "./parts/footer.php"
     ?>
-    
-
 </body>
 
 </html>

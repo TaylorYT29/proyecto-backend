@@ -34,8 +34,6 @@
                 <button class="remove-button">Delete</button>
             </div>
         </div>
-        <!-- Agrega más productos en el carrito aquí -->
-
         <div class="cart-summary">
             <p class="total-price">Total: €40.00</p>
             <button class="checkout-button">Make payment</button>

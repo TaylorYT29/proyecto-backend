@@ -1,4 +1,14 @@
 <?php
+
+/*
+This PHP script handles the verification code submission process. It expects a POST request
+containing the verification code entered by the user. The file validates the submitted code
+against the code stored in the session. If the code is valid, it retrieves the associated email
+and checks for a matching user in the database. If a match is found, the user is redirected to
+the password reset page.
+*/
+
+
 require_once './database.php';
 $message = "";
 

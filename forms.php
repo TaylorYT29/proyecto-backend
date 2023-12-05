@@ -42,8 +42,6 @@ if ($_POST) {
                     "password" => $pass,
                     "email" => $_POST["email"]
                 ]);
-
-                // header("location: book.php?id=".$_POST["register"]);
                 $message = "Registration successful!";
             }
         }
